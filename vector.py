@@ -73,4 +73,28 @@ print('Mean squared error loss: {:.4f}'.format(sklearn.metrics.mean_squared_erro
 # The R2 score: 1 is perfect prediction
 print('R2 score: {:.4f}'.format(sklearn.metrics.r2_score(y, obj.predict(X))))
 
+#Cost Functions
+
+# Define a perfect y=x equation
+X = np.array([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]])
+y = np.array([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10]])
+
+# Generate a random value between +-5
+thetas = (np.random.rand(1,1)-0.5)*10
+
+# Predict our y values with this hypothesis: y_pred= X*theta
+y_pred = X.dot(thetas)
+
+# Plot outputs to see how well we fit the real data
+plt.scatter(X, y,  color='black', label='y_true')
+plt.plot(X, y_pred, color='blue', label='y_pred')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.legend()
+plt.show()
+
+print('Hypothesis: ', thetas) # show our guessed hypothesis
+print('Loss: ', sklearn.metrics.mean_squared_error(y, y_pred)) # Mean Squared error we want minimised.
+
+# Try running this cell multiple time to see how the predicted model and loss function change as we make differnt guesses for theta.
 
