@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import sklearn.linear_model, sklearn.datasets # sklearn is an important package for much of the ML we will be doing
+from sklearn.neighbors import KNeighborsRegressor #Import the Knn library for the regression model
+
 
 #initialize the vectors
 v=pd.array([1,2,3,4,5,6,7,8,9,10])
@@ -97,4 +99,11 @@ print('Hypothesis: ', thetas) # show our guessed hypothesis
 print('Loss: ', sklearn.metrics.mean_squared_error(y, y_pred)) # Mean Squared error we want minimised.
 
 # Try running this cell multiple time to see how the predicted model and loss function change as we make differnt guesses for theta.
+
+#Vector multiplication for linear model prediction
+x = np.array([[1, 3]])
+th = np.array([[-1],[2]])
+
+y_pred = x @ th
+print(y_pred)
 
