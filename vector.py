@@ -107,3 +107,14 @@ th = np.array([[-1],[2]])
 y_pred = x @ th
 print(y_pred)
 
+# Creating our normally distributed random X values
+X = np.array(np.random.randn(1000))
+
+# Create another array y = X^2 for our target variable
+y = np.array(X**2)
+
+# Visualise this relationship
+plt.scatter(X, y,  color='black')
+plt.title('X vs y=X^2')
+plt.xlabel('X')
+plt.ylabel('y')
