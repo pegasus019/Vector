@@ -107,6 +107,20 @@ th = np.array([[-1],[2]])
 y_pred = x @ th
 print(y_pred)
 
+x = np.array([
+     [1, 0],
+     [1, 3],
+     [1, -2],
+])
+th = np.array([
+     [-1],
+     [2],
+])
+
+y_pred = x @ th
+print(y_pred)
+
+
 # Creating our normally distributed random X values
 X = np.array(np.random.randn(1000))
 
@@ -118,3 +132,5 @@ plt.scatter(X, y,  color='black')
 plt.title('X vs y=X^2')
 plt.xlabel('X')
 plt.ylabel('y')
+
+
